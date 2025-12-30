@@ -1,3 +1,4 @@
+// Package models provides structs to work with the database models
 package models
 
 import (
@@ -14,7 +15,7 @@ type Snippet struct {
 	Expires time.Time
 }
 
-// Define a SnippetModel type which wraps a sql.DB connection pool
+// SnippetModel type which wraps a sql.DB connection pool
 type SnippetModel struct {
 	DB *sql.DB
 }
