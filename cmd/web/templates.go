@@ -40,7 +40,7 @@ func newTemplateCache() (map[string]*template.Template, error) {
 		name := filepath.Base(page)
 
 		// The template.FuncMap must be registered with the template set before calling ParseFiles()
-		// template.New() created anm empty tempalte set, Funcs() method registers the template.FuncMap
+		// template.New() created anm empty template set, Funcs() method registers the template.FuncMap
 		ts, err := template.New(name).Funcs(functions).ParseFiles("./ui/html/base.tmpl")
 		if err != nil {
 			return nil, err

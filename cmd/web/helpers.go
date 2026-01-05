@@ -48,6 +48,7 @@ func (app *application) render(w http.ResponseWriter, r *http.Request, status in
 	buf.WriteTo(w)
 }
 
+// Data we can use in our templates
 func (app *application) newTemplateData(r *http.Request) templateData {
 	return templateData{
 		CurrentYear: time.Now().Year(),
